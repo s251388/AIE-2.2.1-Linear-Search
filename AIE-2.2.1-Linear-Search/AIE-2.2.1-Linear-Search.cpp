@@ -30,4 +30,22 @@ int main()
 	assert(LinearSearch(67, IntArray, ArraySize) == 0);
 	assert(LinearSearch(88, IntArray, ArraySize) == -1);
 
+	int Response = 0;
+	int Result = -1;
+
+	for (int i = 0; i < 5; i++) {
+
+		cout << "Please enter an int to search for in the array:" << endl;
+		cin >> Response;
+		Result = LinearSearch(Response, IntArray, ArraySize);
+
+		if (Result == -1) {
+			cout << endl << "The input integer was not found in the array." << endl << endl;
+		}
+		else {
+			cout << endl << "Input found at index:" << Result << endl << endl;
+		}
+
+	}
+
 }
